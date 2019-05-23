@@ -75,14 +75,15 @@
           (when items
             (setq count (+ count (length items)))
             (insert hard-newline)
-            (dashboard-insert-recentf-list
-             (car section)
-             (reverse
-              (let (ret)
-                (dolist (cur items ret)
-                  (setq ret (cons (expand-file-name
-                                   (concat (file-name-as-directory git-repo) cur))
-                                  ret))))))))))))
+            ;; (dashboard-insert-recentf-list
+            ;;  (car section)
+            ;;  (reverse
+            ;;   (let (ret)
+            ;;     (dolist (cur items ret)
+            ;;       (setq ret (cons (expand-file-name
+            ;;                        (concat (file-name-as-directory git-repo) cur))
+            ;;                       ret))))))
+            ))))))
 
 (defun dashboard-project-status (project-dir &optional update)
   "Return a function which will insert git status for PROJECT-DIR.
